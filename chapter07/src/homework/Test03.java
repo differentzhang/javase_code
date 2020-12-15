@@ -2,7 +2,7 @@ package homework;
 import java.util.*;
 public class Test03 {
     public static void main(String[] args) {
-        TreeMap map = new TreeMap(new MyComparator());
+        TreeMap<String,String> map = new TreeMap<>(new MyComparator());
         map.put("1","Lucy");
         map.put("4","Aimee");
         map.put("5","Amanda");
@@ -25,6 +25,6 @@ class MyComparator implements Comparator{  //其实这个比较器可有可无�
     public int compare(Object o1, Object o2) {
         String s1 = (String)o1;
         String s2 = (String)o2;
-        return s1.compareTo(s2);
+        return -s1.compareTo(s2);
     }
 }
